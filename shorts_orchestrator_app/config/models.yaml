@@ -1,0 +1,61 @@
+# Model routing. Local-first defaults; add API keys to .env for cloud models.
+# Format is LiteLLM provider/model, e.g. ollama/qwen2.5:7b, openai/gpt-4o-mini, anthropic/claude-3-5-sonnet-20241022.
+models:
+  manager:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.2
+  trend_scout:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.4
+  prompt_engineer:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.45
+  scriptwriter:
+    provider_model: ollama/llama3.1:8b
+    temperature: 0.7
+  editor:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.3
+  video_generator:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.35
+  video_reviewer:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.1
+  channel_router:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.1
+  compliance:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.1
+  critic:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.1
+
+# Suggested paid upgrades when you are ready:
+# manager: openai/gpt-4o-mini or newer available OpenAI model
+# compliance: anthropic/claude-3-5-sonnet-20241022 or newer available Claude model
+# critic: anthropic/claude-3-5-sonnet-20241022 or newer available Claude model
+
+  narration_director:
+    provider_model: ollama/llama3.1:8b
+    temperature: 0.55
+  idea_scorer:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.15
+  preflight_compliance:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.1
+  originality_checker:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.1
+  analytics_agent:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.2
+  scheduler:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.2
+
+  ops_manager:
+    provider_model: ollama/qwen2.5:7b
+    temperature: 0.15

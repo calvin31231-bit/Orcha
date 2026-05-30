@@ -1,0 +1,20 @@
+channel_key: dog_channel
+display_name: Dog Shorts Channel
+core_promise: wholesome, funny, fictional dog shorts that feel safe for families and pet lovers
+main_character: Biscuit, a chaotic but lovable golden retriever puppy
+visual_style: bright 3D animation, cozy home settings, expressive pet body language, no realistic injury
+voice_style: warm playful narrator, amused documentary tone, original synthetic voice only
+content_pillars:
+  - dog comedy skits
+  - gentle pet education
+  - relatable family-safe home chaos
+format_rules:
+  target_length_seconds: 18-35
+  hook_window_seconds: 2
+  ending: loopable joke, wholesome twist, or visual payoff
+forbidden:
+  - animal cruelty or realistic injury
+  - fake emergencies
+  - veterinary or health claims without sources
+  - copied viral pet clips
+  - celebrity or creator voice imitation

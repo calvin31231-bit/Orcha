@@ -1,0 +1,29 @@
+posting_schedule:
+  default:
+    max_generated_candidates_per_day: 3
+    max_private_uploads_per_day: 3
+    max_public_posts_per_day: 1
+    minimum_minutes_between_public_posts: 240
+    upload_privacy: private
+    publish_mode: manual_review
+  accounts:
+    ai_oddly_satisfying:
+      max_generated_candidates_per_day: 4
+      max_private_uploads_per_day: 3
+      max_public_posts_per_day: 1
+      minimum_minutes_between_public_posts: 360
+    dog_channel:
+      max_generated_candidates_per_day: 3
+      max_private_uploads_per_day: 2
+      max_public_posts_per_day: 1
+      minimum_minutes_between_public_posts: 480
+    vtuber_channel:
+      max_generated_candidates_per_day: 2
+      max_private_uploads_per_day: 1
+      max_public_posts_per_day: 1
+      minimum_minutes_between_public_posts: 720
+    eve_gaming_channel:
+      max_generated_candidates_per_day: 2
+      max_private_uploads_per_day: 1
+      max_public_posts_per_day: 1
+      minimum_minutes_between_public_posts: 720

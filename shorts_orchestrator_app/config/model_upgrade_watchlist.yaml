@@ -1,0 +1,32 @@
+# The Manager reads this file during manager-upgrade-scan.
+# It does not silently install or switch models. Use it as a review list.
+upgrade_policy:
+  auto_switch_models: false
+  auto_pull_models: false
+  test_new_models_on_private_candidates_first: true
+  require_manual_approval_for:
+    - changing production model routes
+    - pulling large models
+    - enabling paid API models
+    - public publishing
+recommended_roles_to_upgrade_first:
+  - preflight_compliance
+  - video_reviewer
+  - critic
+  - ops_manager
+local_model_candidates_to_review:
+  small_fast:
+    - qwen2.5:7b
+    - llama3.1:8b
+  heavier_quality_when_hardware_allows:
+    - qwen2.5:14b
+    - llama3.1:70b
+paid_model_candidates_when_budget_allows:
+  compliance_and_critic:
+    - anthropic/claude-current-best-available
+    - openai/current-best-cost-effective-reasoning-model
+  final_synthesis:
+    - openai/current-best-cost-effective-model
+notes:
+  - Replace placeholder paid model names with current provider model IDs after checking provider documentation.
+  - Do not route public publishing decisions through an untested model change.

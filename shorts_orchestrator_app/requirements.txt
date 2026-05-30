@@ -1,0 +1,23 @@
+# Core orchestrator
+python-dotenv>=1.0.1
+pydantic>=2.8.2
+PyYAML>=6.0.2
+rich>=13.7.1
+requests>=2.32.3
+litellm>=1.44.0
+
+# YouTube APIs
+google-api-python-client>=2.137.0
+google-auth-oauthlib>=1.2.1
+google-auth-httplib2>=0.2.0
+
+# Video processing helpers
+moviepy>=1.0.3
+pysrt>=1.1.2
+
+# Optional local transcription. Comment out if install is slow on your PC.
+faster-whisper>=1.0.3
+
+# Optional dashboard, not required for CLI
+streamlit>=1.36.0
+pandas>=2.2.2

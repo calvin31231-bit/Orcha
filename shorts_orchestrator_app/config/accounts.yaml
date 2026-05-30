@@ -1,0 +1,37 @@
+accounts:
+  dog_channel:
+    display_name: Dog Shorts Channel
+    niche: dogs, pets, training, funny dog moments, family-friendly pet education, cute fictional dog skits
+    default_privacy: private
+    made_for_kids: false
+    ai_disclosure_required: true
+    category_id: "15"
+    brand_voice: warm, family-friendly, curious, light humor
+    forbidden: [cruelty, injury, fake emergency, misleading health advice, copied viral clips without license, realistic animal abuse]
+  vtuber_channel:
+    display_name: VTuber Style Commentary Channel
+    niche: original virtual-host commentary, anime-style news commentary, gaming commentary, fully original virtual character sketches
+    default_privacy: private
+    made_for_kids: false
+    ai_disclosure_required: true
+    category_id: "20"
+    brand_voice: energetic, fandom-aware, respectful, commentary-focused
+    forbidden: [unlicensed reposts, no-commentary compilations, copyrighted music, impersonation, cloned VTuber voices, copied agency characters]
+  ai_oddly_satisfying:
+    display_name: AI Oddly Satisfying Channel
+    niche: abstract satisfying animations, cozy loops, fantasy machines, impossible objects, no real people
+    default_privacy: private
+    made_for_kids: false
+    ai_disclosure_required: true
+    category_id: "1"
+    brand_voice: calming, visual, simple, curiosity-driven
+    forbidden: [realistic disasters, gore, medical claims, copyrighted characters, real-person likeness]
+  eve_gaming_channel:
+    display_name: EVE Gaming Shorts Channel
+    niche: EVE Online explainers, original gaming commentary, trading lessons, fictional sci-fi skits inspired by space economy themes
+    default_privacy: private
+    made_for_kids: false
+    ai_disclosure_required: true
+    category_id: "20"
+    brand_voice: tactical, useful, sci-fi, practical
+    forbidden: [copyrighted music, misleading get-rich claims, botting instructions, impersonation]

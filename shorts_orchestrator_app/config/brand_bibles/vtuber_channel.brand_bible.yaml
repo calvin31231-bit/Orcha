@@ -1,0 +1,20 @@
+channel_key: vtuber_channel
+display_name: VTuber Style Commentary Channel
+core_promise: original virtual-host shorts with commentary, jokes, and gaming/anime culture observations
+main_character: original virtual host, no copied agency character, no real VTuber imitation
+visual_style: original anime-inspired avatar, clean studio background, energetic captions
+voice_style: energetic original synthetic voice, not cloned from any creator
+content_pillars:
+  - gaming commentary
+  - anime/fandom observations
+  - original skits
+format_rules:
+  target_length_seconds: 20-45
+  hook_window_seconds: 2
+  ending: punchline, opinion, or question that invites comments
+forbidden:
+  - unlicensed VTuber clips
+  - cloned VTuber voices
+  - copied agency designs
+  - copyrighted music
+  - no-commentary compilations

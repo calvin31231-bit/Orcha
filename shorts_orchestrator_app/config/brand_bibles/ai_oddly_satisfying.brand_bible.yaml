@@ -1,0 +1,21 @@
+channel_key: ai_oddly_satisfying
+display_name: AI Oddly Satisfying Channel
+core_promise: original cozy impossible-machine loops and abstract satisfying animations
+main_character: none; recurring world of tiny impossible machines
+visual_style: soft 3D, clean macro shots, smooth motion, tactile materials, calming loops
+voice_style: usually no voice; optional quiet curious narrator for explainable machine shorts
+content_pillars:
+  - impossible machines
+  - cozy loops
+  - abstract satisfying motion
+  - miniature worlds
+format_rules:
+  target_length_seconds: 12-28
+  hook_window_seconds: 1.5
+  ending: seamless loop or surprising reset
+forbidden:
+  - realistic disasters
+  - copyrighted characters
+  - real-person likeness
+  - gore or gross-out content
+  - low-effort repeated template videos

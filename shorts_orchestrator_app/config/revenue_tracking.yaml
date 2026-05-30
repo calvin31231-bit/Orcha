@@ -1,0 +1,25 @@
+# Optional rough revenue/profit estimator for the Manager debrief.
+# YouTube Analytics may not expose revenue until the channel is monetized. Until then,
+# the Manager uses rpm_estimate_usd only as a planning estimate, not a promise.
+revenue_tracking:
+  default:
+    rpm_estimate_usd: 0.00
+    estimated_variable_cost_per_video_usd: 0.00
+    estimated_daily_fixed_cost_usd: 0.00
+  accounts:
+    ai_oddly_satisfying:
+      rpm_estimate_usd: 0.00
+      estimated_variable_cost_per_video_usd: 0.00
+      estimated_daily_fixed_cost_usd: 0.00
+    dog_channel:
+      rpm_estimate_usd: 0.00
+      estimated_variable_cost_per_video_usd: 0.00
+      estimated_daily_fixed_cost_usd: 0.00
+    vtuber_channel:
+      rpm_estimate_usd: 0.00
+      estimated_variable_cost_per_video_usd: 0.00
+      estimated_daily_fixed_cost_usd: 0.00
+    eve_gaming_channel:
+      rpm_estimate_usd: 0.00
+      estimated_variable_cost_per_video_usd: 0.00
+      estimated_daily_fixed_cost_usd: 0.00

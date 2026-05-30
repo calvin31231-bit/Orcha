@@ -1,0 +1,23 @@
+{
+  "README": "Replace this file with an API-format ComfyUI workflow exported from your ComfyUI text-to-video setup. Put __PROMPT__ in your positive prompt node and __NEGATIVE_PROMPT__ in your negative prompt node. The app will replace those strings before queueing the workflow.",
+  "3": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "REPLACE_WITH_YOUR_MODEL.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "__PROMPT__",
+      "clip": ["3", 1]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "__NEGATIVE_PROMPT__",
+      "clip": ["3", 1]
+    }
+  }
+}

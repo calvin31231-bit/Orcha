@@ -1,0 +1,55 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260530160203
+Username: ALYSSAPC\calvi
+RunAs User: ALYSSAPC\calvi
+Configuration Name: 
+Machine: ALYSSAPC (Microsoft Windows NT 10.0.26200.0)
+Host Application: powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\calvi\Documents\AiWorkspace\shorts_orchestrator_app_debug_setup\shorts_orchestrator_app\setup_windows.ps1
+Process ID: 35956
+PSVersion: 5.1.26100.8521
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8521
+BuildVersion: 10.0.26100.8521
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+============================================================
+ Shorts Orchestrator - Windows Setup
+============================================================
+Working folder: C:\Users\calvi\Documents\AiWorkspace\shorts_orchestrator_app_debug_setup\shorts_orchestrator_app
+Log file: C:\Users\calvi\Documents\AiWorkspace\shorts_orchestrator_app_debug_setup\shorts_orchestrator_app\setup_log.txt
+
+Checking Python...
+Python 3.14.3
+Creating virtual environment...
+
+Upgrading pip...
+Requirement already satisfied: pip in c:\users\calvi\documents\aiworkspace\shorts_orchestrator_app_debug_setup\shorts_or
+chestrator_app\.venv\lib\site-packages (25.3)
+Collecting pip
+  Using cached pip-26.1.1-py3-none-any.whl.metadata (4.6 kB)
+Using cached pip-26.1.1-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 25.3
+    Uninstalling pip-25.3:
+      Successfully uninstalled pip-25.3
+Successfully installed pip-26.1.1
+Installing requirements...
+iktoken-0.12.0 tokenizers-0.22.2 toml-0.10.2 tqdm-4.67.3 typer-0.26.4 typing-extensions-4.15.0 typing-inspection-0.4.2 t
+zdata-2026.2 uritemplate-4.2.0 urllib3-2.7.0 uvicorn-0.48.0 watchdog-6.0.0 websockets-16.0 yarl-1.24.2 zipp-4.1.0
+Created .env from .env.example
+
+Setup complete.
+Next steps:
+  1. Install Ollama if you have not already.
+  2. Run: ollama pull qwen2.5:7b
+  3. Run: ollama pull llama3.1:8b
+  4. Launch HUD with: launch_dashboard.bat
+**********************
+Windows PowerShell transcript end
+End time: 20260530161234
+**********************

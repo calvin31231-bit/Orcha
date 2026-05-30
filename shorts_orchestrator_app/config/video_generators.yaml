@@ -1,0 +1,20 @@
+video_generators:
+  mock:
+    type: local_ffmpeg_placeholder
+    description: Creates a simple placeholder mp4 so you can test the pipeline without a video model.
+  comfyui:
+    type: comfyui_api
+    host_env: COMFYUI_HOST
+    default_host: http://127.0.0.1:8188
+    workflow_path: config/comfyui_text_to_video_workflow.json
+    description: Queues an API-format ComfyUI workflow. Export your real Wan/LTX/Hunyuan workflow from ComfyUI and replace the template.
+recommended_local_models:
+  starter_fast:
+    name: LTX-Video via ComfyUI
+    use_for: quick tests, shorter videos, lower VRAM cost
+  balanced:
+    name: Wan 2.1 1.3B via ComfyUI
+    use_for: consumer GPU text-to-video experiments
+  quality:
+    name: HunyuanVideo / HunyuanVideo 1.5 via ComfyUI
+    use_for: higher-quality local generations if your GPU and VRAM can handle it

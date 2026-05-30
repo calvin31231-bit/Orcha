@@ -1,0 +1,14 @@
+voiceover:
+  default_provider: mock
+  recommended_free_stack:
+    first_choice: Kokoro TTS for lightweight local narration if you install it separately
+    fallback: Piper TTS using a local voice model
+    windows_builtin_test: windows_sapi provider for quick local Windows tests
+  piper_bin: piper
+  piper_model: ""
+  rules:
+    - Use original synthetic voices only.
+    - Do not clone celebrities, creators, VTubers, politicians, or private people without permission.
+    - Prefer one consistent channel voice per brand bible.
+    - Keep scripts under 70 words for most Shorts.
+    - Generate captions from the same narration script for consistency.
