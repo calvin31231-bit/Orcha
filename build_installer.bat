@@ -65,6 +65,16 @@ if errorlevel 1 (
 :: --- Step 3: Build Tauri application ----------------------------------------
 echo.
 echo [4/4] Building Tauri application...
+
+:: Regenerate Windows-valid icons (DIB-format icon.ico that RC.EXE accepts).
+echo Regenerating icons...
+python generate_icons.py
+if errorlevel 1 (
+    echo ERROR: Icon generation failed! Is Python on your PATH?
+    pause
+    exit /b 1
+)
+
 call npm install
 if errorlevel 1 (
     echo ERROR: npm install failed!
