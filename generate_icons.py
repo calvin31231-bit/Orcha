@@ -37,18 +37,43 @@ with open(os.path.join(ICONS_DIR, "128x128@2x.png"), "wb") as f:
 print("  Created: 128x128@2x.png")
 
 
+def make_dib(size: int, color=(30, 58, 138)) -> bytes:
+    """Classic uncompressed BMP/DIB icon entry that Windows RC.EXE accepts.
+
+    RC.EXE rejects PNG-compressed icon entries for standard sizes, so each
+    entry is a BITMAPINFOHEADER + 32bpp BGRA pixels (bottom-up) + 1bpp AND mask.
+    """
+    r, g, b = color
+    header = struct.pack(
+        "<IiiHHIIiiII",
+        40,            # biSize
+        size,          # biWidth
+        size * 2,      # biHeight (XOR + AND masks)
+        1,             # biPlanes
+        32,            # biBitCount
+        0,             # biCompression = BI_RGB
+        0,             # biSizeImage (0 allowed for BI_RGB)
+        0, 0, 0, 0,    # ppm + colors (unused)
+    )
+    pixel = bytes([b, g, r, 255])           # BGRA, fully opaque
+    xor = pixel * (size * size)
+    row_bytes = ((size + 31) // 32) * 4     # AND mask rows padded to 4 bytes
+    and_mask = b"\x00" * (row_bytes * size)
+    return header + xor + and_mask
+
+
 def make_ico() -> bytes:
     sizes = [16, 32, 48]
-    pngs = [make_png(s) for s in sizes]
+    dibs = [make_dib(s) for s in sizes]
     header_size = 6
     dir_entry_size = 16
     offset = header_size + dir_entry_size * len(sizes)
     ico = struct.pack("<HHH", 0, 1, len(sizes))
-    for i, (s, png) in enumerate(zip(sizes, pngs)):
-        ico += struct.pack("<BBBBHHII", s if s < 256 else 0, s if s < 256 else 0, 0, 0, 1, 32, len(png), offset)
-        offset += len(png)
-    for png in pngs:
-        ico += png
+    for s, dib in zip(sizes, dibs):
+        ico += struct.pack("<BBBBHHII", s if s < 256 else 0, s if s < 256 else 0, 0, 0, 1, 32, len(dib), offset)
+        offset += len(dib)
+    for dib in dibs:
+        ico += dib
     return ico
 
 
