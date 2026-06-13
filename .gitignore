@@ -1,0 +1,27 @@
+# Node
+node_modules/
+dist/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+python_core/dist/
+python_core/build/
+python_core/*.spec
+*.db
+*.db-wal
+*.db-shm
+
+# Tauri
+src-tauri/target/
+src-tauri/bin/*.exe
+
+# Secrets - NEVER commit these
+.env.local
+eve_credentials.json
+
+# OS
+.DS_Store
+Thumbs.db
